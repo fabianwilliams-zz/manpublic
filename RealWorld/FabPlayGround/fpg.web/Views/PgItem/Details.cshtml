@@ -1,0 +1,91 @@
+﻿@model fpg.common.DataObjects.PgItem
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PgItem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaygroundName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaygroundName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaygroundMainImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaygroundMainImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaygroundMainImageThumb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaygroundMainImageThumb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaygroundAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaygroundAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaygroundGeoLonLat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaygroundGeoLonLat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amenities)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amenities)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Added)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Added)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Visit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Visit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

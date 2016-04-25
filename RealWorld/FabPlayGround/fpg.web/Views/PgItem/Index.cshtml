@@ -1,0 +1,49 @@
+﻿@model IEnumerable<fpg.common.DataObjects.PgItem>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PlaygroundName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlaygroundMainImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlaygroundMainImageThumb)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlaygroundName)
+        </td>
+        <td>
+            <img src="@Html.Raw(item.PlaygroundMainImage)" />
+        </td>
+        <td>
+            <img src="@Html.Raw(item.PlaygroundMainImageThumb)" />
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {id = item.Id}) |
+            @Html.ActionLink("Details", "Details", new {id = item.Id}) |
+            @Html.ActionLink("Delete", "Delete", new {id = item.Id}) |
+            @Html.ActionLink("Add Amenities", "AddAmenities", new {id = item.Id}) |
+            @Html.ActionLink("Add Visit", "AddVisits", new { id = item.Id })
+        </td>
+
+   </tr>
+}
+
+</table>
